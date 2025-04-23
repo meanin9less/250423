@@ -82,6 +82,7 @@ public class SchoolRecordManager {
             System.out.println("비밀번호가 잘못되었습니다.");
             return null;
         }
+        System.out.println(admin.getName()+"님 반갑습니다.");
         return admin;
     }
 
@@ -101,10 +102,10 @@ public class SchoolRecordManager {
         Scanner s = new Scanner(System.in);
         while (true) {
             try {
-                System.out.println("ID : ");
-                String inputId = s.nextLine();
+                System.out.print("ID : ");
+                String inputId = s.next();
                 if (this.stuGradeMap.containsKey(inputId)) {
-                    System.out.println("NAME : ");
+                    System.out.print("NAME : ");
                     String inputName = s.nextLine();
                     if (this.stuGradeMap.get(inputId).getName().equals(inputName)) {
                         System.out.print("국어 : ");
